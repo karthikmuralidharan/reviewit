@@ -1,0 +1,12 @@
+# .goreleaser.yml
+# Build customization
+builds:
+  - main: ./cmd/main.go
+    binary: reviewit
+    ldflags: -s -w
+    goos:
+      - windows
+      - darwin
+      - linux
+    goarch:
+      - amd64
